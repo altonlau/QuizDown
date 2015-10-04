@@ -20,6 +20,17 @@ class AnswerLabel: RoundedLabel {
     }
     
     func labelTouched(recognizer: UITapGestureRecognizer) {
+        UIView.animateWithDuration(0.1) { () -> Void in
+            self.layer.backgroundColor = UIColor(hexString: "#f1a9a0").CGColor
+        }
+        
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.layer.backgroundColor = UIColor(hexString: "#f1a9a0").CGColor
+            }) { (Bool) -> Void in
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.layer.backgroundColor = UIColor.clearColor().CGColor
+                })
+        }
         delegate?.didSelectAnswer(self)
     }
 }
