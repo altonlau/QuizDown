@@ -71,6 +71,12 @@ public class QuestionActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        Sound.screamSheep(this);
+        moveTaskToBack(true);
+    }
+
     public JSONArray getQuestionArray() {
         return jsonArray;
     }
