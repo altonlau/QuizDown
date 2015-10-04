@@ -2,23 +2,29 @@ import AVFoundation
 import Foundation
 import UIKit
 
-class QuizViewController: UIViewController, AnswerLabelDelegate {
+class QuizViewController: UIViewController, AnswerLabelDelegate, GoatAudioPlayerDelegate {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel1: AnswerLabel!
     @IBOutlet weak var answerLabel2: AnswerLabel!
     @IBOutlet weak var answerLabel3: AnswerLabel!
     @IBOutlet weak var answerLabel4: AnswerLabel!
+    @IBOutlet weak var mistakeLabel: UILabel!
+    @IBOutlet weak var finalView: UIView!
     var goatAudioPlayer = GoatAudioPlayer()
     var questionArray = [Question]()
     var correctAnswerIndex = 0
     var currentQuestionNumber = 0
-    let randomStringAnswers = ["Que?", "2", "Life", "Me no understand!?", "WTF!?", "8=👊🏻=D💦", "ಠ_ಠ", "( •_•)\n( •_•)>⌐■-■\n(⌐■_■) #Yeeeaaahhh", "(ノಠ益ಠ)ノ彡┻━┻", "ᶘ ᵒᴥᵒᶅ"]
+    var numberOfMistakes = 0
+    var isFinished = false
+    let randomStringAnswers = ["Que?", "2", "Life", "Me no understand!?", "WTF!?", "8=👊🏻=D💦", "ಠ_ಠ", "( •_•)\n( •_•)>⌐■-■\n(⌐■_■) #Yeeeaaahhh", "٩(╬ʘ益ʘ╬)۶", "ᶘ ᵒᴥᵒᶅ"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        
+        goatAudioPlayer.delegate = self
         
         answerLabel1.delegate = self
         answerLabel2.delegate = self
@@ -31,6 +37,11 @@ class QuizViewController: UIViewController, AnswerLabelDelegate {
     }
     
     @IBAction func otherButtonPressed(sender: AnyObject) {
+        goatAudioPlayer.play()
+    }
+    
+    @IBAction func rewardButtonPressed(sender: AnyObject) {
+        goatAudioPlayer.numberOfLoops = numberOfMistakes == 0 ? 0 : numberOfMistakes - 1
         goatAudioPlayer.play()
     }
     
@@ -61,6 +72,14 @@ class QuizViewController: UIViewController, AnswerLabelDelegate {
             nextQuestion()
         } else {
             goatAudioPlayer.play()
+            numberOfMistakes++
+        }
+    }
+    
+    // MARK - GoatAudioPlayerDelegate Methods
+    func goatAudioDidFinishPlaying() {
+        if isFinished {
+            navigationController?.popToRootViewControllerAnimated(true)
         }
     }
     
@@ -72,6 +91,13 @@ class QuizViewController: UIViewController, AnswerLabelDelegate {
             
             let index = Int(arc4random_uniform(UInt32(questionArray.count)))
             setupQuestion(questionArray.removeAtIndex(index))
+        } else {
+            mistakeLabel.text = "You only made \(numberOfMistakes) mistakes!"
+            finalView.hidden = false
+            isFinished = true
+            UIView.animateWithDuration(1, animations: { () -> Void in
+                self.finalView.alpha = 1
+            })
         }
     }
     
