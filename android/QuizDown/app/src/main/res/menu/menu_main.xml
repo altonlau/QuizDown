@@ -5,6 +5,7 @@
     <item
         android:id="@+id/action_mute"
         android:orderInCategory="100"
+        android:icon="@drawable/sound_off_icon"
         android:title="@string/action_mute"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>
