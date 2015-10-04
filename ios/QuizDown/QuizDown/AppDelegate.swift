@@ -1,18 +1,9 @@
-//
-//  AppDelegate.swift
-//  QuizDown
-//
-//  Created by Alton Lau on 2015-10-04.
-//  Copyright © 2015 Alton/Gourave. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
