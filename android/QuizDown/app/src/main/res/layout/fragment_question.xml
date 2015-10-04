@@ -1,14 +1,59 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_purple"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.ag.quizdown.fragment.QuestionFragment">
 
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="30dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/answer1"
+            style="@style/btn_answer_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp" />
+
+        <Button
+            android:id="@+id/answer2"
+            style="@style/btn_answer_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/answer1"
+            android:layout_margin="100dp" />
+
+        <Button
+            android:id="@+id/answer3"
+            style="@style/btn_answer_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/answer1"
+            android:layout_margin="100dp" />
+
+        <Button
+            android:id="@+id/answer4"
+            style="@style/btn_answer_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/answer3"
+            android:layout_alignTop="@id/answer2"
+            android:layout_margin="100dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

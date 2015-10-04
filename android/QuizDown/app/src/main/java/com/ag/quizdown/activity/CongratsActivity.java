@@ -1,50 +1,39 @@
 package com.ag.quizdown.activity;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ag.quizdown.R;
-import com.ag.quizdown.fragment.QuestionFragment;
+import com.ag.quizdown.fragment.CongratsFragment;
 import com.ag.quizdown.sound.Sound;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+public class CongratsActivity extends AppCompatActivity {
 
-public class QuestionActivity extends AppCompatActivity {
-
-    private static final String JSON_TAG = "data";
-
-    private QuestionFragment mQuestionFragment;
-    private JSONArray jsonArray;
+    private int numWrong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (getIntent().getExtras() != null) {
-            Bundle intentExtras = getIntent().getExtras();
-            try {
-                // Used to the json array from the activity
-                jsonArray = (new JSONObject(intentExtras.getString("json"))).getJSONArray(JSON_TAG);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            numWrong = getIntent().getExtras().getInt("numWrong");
+        }
+        else {
+            numWrong = 0;
         }
 
-        getSupportActionBar().setTitle("Question #");
+        CongratsFragment congratsFragment = new CongratsFragment();
 
-        mQuestionFragment = new QuestionFragment();
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.replace(android.R.id.content, mQuestionFragment);
+        fragmentTransaction.replace(android.R.id.content, congratsFragment);
         fragmentTransaction.commit();
+
     }
 
     @Override
@@ -71,14 +60,8 @@ public class QuestionActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        Sound.screamSheep(this);
-        moveTaskToBack(true);
-    }
-
-    public JSONArray getQuestionArray() {
-        return jsonArray;
+    public int getNumWrong() {
+        return numWrong;
     }
 
 }

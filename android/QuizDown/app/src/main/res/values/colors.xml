@@ -9,4 +9,5 @@
     <color name="button_red_disabled">#D2D7D3</color>
     <color name="primary_green">#87D37C</color>
     <color name="primary_dark_green">#87D37C</color>
+    <color name="white">#FFFFFF</color>
 </resources>
