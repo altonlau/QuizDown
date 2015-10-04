@@ -1,9 +1,14 @@
 import AVFoundation
 import Foundation
 
-class GoatAudioPlayer {
+protocol GoatAudioPlayerDelegate: class {
+    func goatAudioDidFinishPlaying()
+}
+
+class GoatAudioPlayer: NSObject, AVAudioPlayerDelegate {
     
     private var goatAudioPlayer = AVAudioPlayer()
+    weak var delegate: GoatAudioPlayerDelegate?
     var isPlaying: Bool {
         get {
             return goatAudioPlayer.playing
@@ -18,12 +23,15 @@ class GoatAudioPlayer {
         }
     }
     
-    init() {
+    override init() {
+        super.init()
+        
         let goatAudioURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("screaming_goat", ofType: "mp3")!)
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try goatAudioPlayer = AVAudioPlayer(contentsOfURL: goatAudioURL)
+            goatAudioPlayer.delegate = self
             goatAudioPlayer.prepareToPlay()
         } catch {
             print("Can't get audio file.")
@@ -39,6 +47,12 @@ class GoatAudioPlayer {
     
     func stop() {
         goatAudioPlayer.stop()
+    }
+    
+    // MARK - AVAudioPlayerDelegate Methods
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        delegate?.goatAudioDidFinishPlaying()
     }
     
 }

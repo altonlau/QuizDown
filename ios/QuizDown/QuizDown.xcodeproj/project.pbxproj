@@ -22,7 +22,6 @@
 		FA320AC21BC1736F005D9EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA320ABB1BC1736F005D9EF2 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		FA320AC31BC1736F005D9EF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA320ABE1BC1736F005D9EF2 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FA4437941BC1B647004BE513 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4437931BC1B647004BE513 /* UIColor+Theme.swift */; settings = {ASSET_TAGS = (); }; };
-		FA4437961BC1B8C9004BE513 /* Array+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4437951BC1B8C9004BE513 /* Array+Shuffle.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		FA320ABC1BC1736F005D9EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA320ABE1BC1736F005D9EF2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA4437931BC1B647004BE513 /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
-		FA4437951BC1B8C9004BE513 /* Array+Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Shuffle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 				FA0CA25F1BC1862F004C8994 /* GoatAudioPlayer.swift */,
 				FA0CA26C1BC19C7A004C8994 /* Dispatch.swift */,
 				FA4437931BC1B647004BE513 /* UIColor+Theme.swift */,
-				FA4437951BC1B8C9004BE513 /* Array+Shuffle.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0CA2601BC1862F004C8994 /* GoatAudioPlayer.swift in Sources */,
-				FA4437961BC1B8C9004BE513 /* Array+Shuffle.swift in Sources */,
 				FA4437941BC1B647004BE513 /* UIColor+Theme.swift in Sources */,
 				FA0CA2691BC19939004C8994 /* Question.swift in Sources */,
 				FA320A991BC15CAE005D9EF2 /* AppDelegate.swift in Sources */,

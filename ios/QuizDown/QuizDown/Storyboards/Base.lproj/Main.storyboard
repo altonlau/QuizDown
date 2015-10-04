@@ -136,68 +136,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Question" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRz-Dp-Rlo" userLabel="Question Text View">
-                                <rect key="frame" x="30" y="84" width="540" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="qsn-Am-0QY"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Msr-9g-WAr" userLabel="Vertical Stack View">
-                                <rect key="frame" x="30" y="254" width="540" height="326"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPN-jh-UsH" userLabel="Question View">
+                                <rect key="frame" x="20" y="64" width="580" height="536"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nud-PJ-4jG" userLabel="Horizontal Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="158"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-VU-w24">
+                                        <rect key="frame" x="10" y="20" width="560" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Tll-f2-0MC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q48-I3-H3K" userLabel="Vertical Stack View">
+                                        <rect key="frame" x="10" y="190" width="560" height="326"/>
                                         <subviews>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nO-iH-dFa" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="265" height="158"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-LT-9HX" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
-                                                <rect key="frame" x="275" y="0.0" width="265" height="158"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ula-j2-j63" userLabel="Horizontal Stack View">
-                                        <rect key="frame" x="0.0" y="168" width="540" height="158"/>
-                                        <subviews>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-jG-6fh" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="265" height="158"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUa-G2-gwJ" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
-                                                <rect key="frame" x="275" y="0.0" width="265" height="158"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1J6-7W-R6v" userLabel="Horizontal Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="158"/>
+                                                <subviews>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTt-Dj-OLi" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="158"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-Id-cSV" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
+                                                        <rect key="frame" x="285" y="0.0" width="275" height="158"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-20-gip" userLabel="Horizontal Stack View">
+                                                <rect key="frame" x="0.0" y="168" width="560" height="158"/>
+                                                <subviews>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-yw-5mw" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="158"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uH-OK-pSk" customClass="AnswerLabel" customModule="QuizDown" customModuleProvider="target">
+                                                        <rect key="frame" x="285" y="0.0" width="275" height="158"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="q48-I3-H3K" firstAttribute="trailing" secondItem="qRj-VU-w24" secondAttribute="trailing" id="0Wa-oH-UXf"/>
+                                    <constraint firstAttribute="trailing" secondItem="qRj-VU-w24" secondAttribute="trailing" constant="10" id="39d-ZA-DdL"/>
+                                    <constraint firstItem="q48-I3-H3K" firstAttribute="leading" secondItem="qRj-VU-w24" secondAttribute="leading" id="K42-7X-3q4"/>
+                                    <constraint firstItem="qRj-VU-w24" firstAttribute="leading" secondItem="xPN-jh-UsH" secondAttribute="leading" constant="10" id="PAd-rP-9xu"/>
+                                    <constraint firstItem="qRj-VU-w24" firstAttribute="top" secondItem="xPN-jh-UsH" secondAttribute="top" constant="20" id="YO0-oz-2UD"/>
+                                    <constraint firstAttribute="bottom" secondItem="q48-I3-H3K" secondAttribute="bottom" constant="20" id="YuS-pw-S5c"/>
+                                    <constraint firstItem="q48-I3-H3K" firstAttribute="top" secondItem="qRj-VU-w24" secondAttribute="bottom" constant="20" id="tHs-AQ-bCF"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoD-EE-gWy" userLabel="Final View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGj-Cn-IjA">
+                                        <rect key="frame" x="0.0" y="100" width="590" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="e0k-7v-OPc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You only made x mistakes!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-44-bzr">
+                                        <rect key="frame" x="0.0" y="396" width="600" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="zLP-qW-tZK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwm-3K-blE" customClass="RoundedButton" customModule="QuizDown" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="243" width="200" height="50"/>
+                                        <color key="backgroundColor" red="0.52941176469999995" green="0.82745098039999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="T9f-Hc-9yf"/>
+                                            <constraint firstAttribute="height" constant="50" id="vAM-3G-TDJ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.52941176469999995" green="0.82745098039999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Click here for your reward!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rewardButtonPressed:" destination="Rg5-Zn-GmX" eventType="touchUpInside" id="1Vl-ks-rXR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sGj-Cn-IjA" secondAttribute="trailing" constant="10" id="Eme-OQ-iVB"/>
+                                    <constraint firstItem="sGj-Cn-IjA" firstAttribute="top" secondItem="WoD-EE-gWy" secondAttribute="top" constant="100" id="LzW-V5-UDu"/>
+                                    <constraint firstItem="Iwm-3K-blE" firstAttribute="centerX" secondItem="WoD-EE-gWy" secondAttribute="centerX" id="eHt-Ui-faP"/>
+                                    <constraint firstAttribute="trailing" secondItem="e4z-44-bzr" secondAttribute="trailing" id="jk7-Fd-Y9E"/>
+                                    <constraint firstAttribute="bottom" secondItem="e4z-44-bzr" secondAttribute="bottom" constant="100" id="l6F-9V-vsy"/>
+                                    <constraint firstItem="Iwm-3K-blE" firstAttribute="centerY" secondItem="WoD-EE-gWy" secondAttribute="centerY" id="mie-C7-xr5"/>
+                                    <constraint firstItem="sGj-Cn-IjA" firstAttribute="leading" secondItem="WoD-EE-gWy" secondAttribute="leading" id="oL9-Kj-vg6"/>
+                                    <constraint firstItem="e4z-44-bzr" firstAttribute="leading" secondItem="WoD-EE-gWy" secondAttribute="leading" id="r0v-Lw-UXe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leadingMargin" constant="10" id="EV7-KY-E5g"/>
-                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="top" secondItem="d8q-KI-B4i" secondAttribute="bottom" constant="20" id="QhO-E4-9wA"/>
-                            <constraint firstAttribute="bottom" secondItem="Msr-9g-WAr" secondAttribute="bottom" constant="20" symbolic="YES" id="Rp1-Ma-fcV"/>
-                            <constraint firstItem="Msr-9g-WAr" firstAttribute="trailing" secondItem="KRz-Dp-Rlo" secondAttribute="trailing" id="a57-as-vb8"/>
-                            <constraint firstItem="Msr-9g-WAr" firstAttribute="leading" secondItem="KRz-Dp-Rlo" secondAttribute="leading" id="jeX-qh-UZS"/>
-                            <constraint firstItem="Msr-9g-WAr" firstAttribute="top" secondItem="KRz-Dp-Rlo" secondAttribute="bottom" constant="20" id="pVc-ld-QKT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KRz-Dp-Rlo" secondAttribute="trailing" constant="10" id="tii-yV-Jda"/>
+                            <constraint firstItem="y9b-7f-SVm" firstAttribute="top" secondItem="xPN-jh-UsH" secondAttribute="bottom" id="6mq-j1-72q"/>
+                            <constraint firstItem="xPN-jh-UsH" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leadingMargin" id="Bg0-nW-eEB"/>
+                            <constraint firstAttribute="trailing" secondItem="WoD-EE-gWy" secondAttribute="trailing" id="JKs-Dz-pMd"/>
+                            <constraint firstItem="WoD-EE-gWy" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leading" id="LuJ-ub-q9s"/>
+                            <constraint firstItem="xPN-jh-UsH" firstAttribute="top" secondItem="d8q-KI-B4i" secondAttribute="bottom" id="SU9-oA-7tQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xPN-jh-UsH" secondAttribute="trailing" id="dmc-Jj-9iS"/>
+                            <constraint firstItem="WoD-EE-gWy" firstAttribute="top" secondItem="d8q-KI-B4i" secondAttribute="bottom" id="gLG-Zb-ZcM"/>
+                            <constraint firstItem="y9b-7f-SVm" firstAttribute="top" secondItem="WoD-EE-gWy" secondAttribute="bottom" id="h6e-kQ-91h"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -210,11 +275,13 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="answerLabel1" destination="9nO-iH-dFa" id="Kk9-Yi-rEM"/>
-                        <outlet property="answerLabel2" destination="9Ab-LT-9HX" id="VlM-MR-Wui"/>
-                        <outlet property="answerLabel3" destination="cOl-jG-6fh" id="dQU-Qq-wLe"/>
-                        <outlet property="answerLabel4" destination="gUa-G2-gwJ" id="Rgb-Hh-mNo"/>
-                        <outlet property="questionTextView" destination="KRz-Dp-Rlo" id="CdL-9D-If9"/>
+                        <outlet property="answerLabel1" destination="BTt-Dj-OLi" id="vdk-Ra-j4d"/>
+                        <outlet property="answerLabel2" destination="kA4-Id-cSV" id="h99-SD-L1z"/>
+                        <outlet property="answerLabel3" destination="Mb9-yw-5mw" id="k7a-uc-Kk8"/>
+                        <outlet property="answerLabel4" destination="4uH-OK-pSk" id="XYB-2P-e7a"/>
+                        <outlet property="finalView" destination="WoD-EE-gWy" id="hpS-vW-2IO"/>
+                        <outlet property="mistakeLabel" destination="e4z-44-bzr" id="55g-C6-G1d"/>
+                        <outlet property="questionLabel" destination="qRj-VU-w24" id="Z6r-34-Zi9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rj8-09-gKg" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -20,7 +20,7 @@ class LoadingViewController: UIViewController {
                 questions.append(question)
             }
             
-            self.pViewController.questionArray = self.shuffleArray(questions)
+            self.pViewController.questionArray = questions
             self.dismissViewControllerAnimated(true, completion: { () -> Void in
                 self.pViewController.startQuiz();
             })
@@ -51,17 +51,5 @@ class LoadingViewController: UIViewController {
             }
         }
         task.resume()
-    }
-    
-    func shuffleArray<T>(var array: Array<T>) -> Array<T> {
-        for var index = array.count - 1; index > 0; index-- {
-            // Random int from 0 to index-1
-            let j = Int(arc4random_uniform(UInt32(index-1)))
-            
-            // Swap two array elements
-            // Notice '&' required as swap uses 'inout' parameters
-            swap(&array[index], &array[j])
-        }
-        return array
     }
 }
