@@ -13,9 +13,18 @@ import com.ag.quizdown.sound.Sound;
 
 public class CongratsActivity extends AppCompatActivity {
 
+    private int numWrong;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getIntent().getExtras() != null) {
+            numWrong = getIntent().getExtras().getInt("numWrong");
+        }
+        else {
+            numWrong = 0;
+        }
 
         CongratsFragment congratsFragment = new CongratsFragment();
 
@@ -49,6 +58,10 @@ public class CongratsActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public int getNumWrong() {
+        return numWrong;
     }
 
 }
