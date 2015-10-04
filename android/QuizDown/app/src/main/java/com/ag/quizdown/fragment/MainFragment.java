@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.ag.quizdown.R;
 import com.ag.quizdown.sound.Sound;
@@ -34,8 +35,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private Button mClickMe;
 
     public MainFragment() {
-    }
 
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,9 +58,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         mMathMedium.setOnClickListener(this);
         mMathHard.setOnClickListener(this);
 
-
     }
-
 
     @Override
     public void onClick(View v) {
@@ -85,9 +84,6 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 DefaultHttpClient httpclient = new DefaultHttpClient(new BasicHttpParams());
                 HttpPost httppost = new HttpPost("http://gtesting.comule.com/sqldata.php");
 
-                // Depends on your web service
-                httppost.setHeader("Content-type", "application/json");
-
                 InputStream inputStream = null;
                 String result = null;
                 try {
@@ -105,7 +101,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                     }
                     result = sb.toString();
                 } catch (Exception e) {
-                    // Oops
+                    e.printStackTrace();
                 } finally {
                     try {
                         if (inputStream != null) inputStream.close();
@@ -120,9 +116,17 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 try {
 
                     this.mProgressDialog.dismiss();
-                    JSONArray jsonArray = (new JSONObject(result)).getJSONArray(JSON_TAG);
+                    if (result != null) {
+                        JSONArray jsonArray = (new JSONObject(result)).getJSONArray(JSON_TAG);
+                        System.out.println("asdasd");
+                    }
+                    else {
+                        Toast.makeText(getActivity(), "No questions available :(",
+                                Toast.LENGTH_LONG).show();
+                    }
 
-                    System.out.println("asd");
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
