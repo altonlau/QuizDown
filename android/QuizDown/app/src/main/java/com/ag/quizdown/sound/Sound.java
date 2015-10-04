@@ -27,7 +27,6 @@ public class Sound {
         });
 
         mMediaPlayer.start();
-
     }
 
 }
