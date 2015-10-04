@@ -11,6 +11,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iqv-fG-PgQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.52941176470588236" green="0.82745098039215681" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,6 +51,9 @@
                                         <state key="normal" title="Math Easy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rg5-Zn-GmX" kind="show" id="VoK-0z-Qyp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-ig-xF1" customClass="RoundedButton" customModule="QuizDown" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="580" height="50"/>
@@ -62,6 +66,9 @@
                                         <state key="normal" title="Math Medium">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rg5-Zn-GmX" kind="show" id="fHZ-gK-mit"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54C-T7-bNW" customClass="RoundedButton" customModule="QuizDown" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="580" height="50"/>
@@ -74,6 +81,9 @@
                                         <state key="normal" title="Math Hard">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rg5-Zn-GmX" kind="show" id="vZw-Mw-o2g"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-gj-exj" customClass="RoundedButton" customModule="QuizDown" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="210" width="580" height="50"/>
@@ -101,11 +111,83 @@
                             <constraint firstItem="fT1-aH-vQj" firstAttribute="centerY" secondItem="prp-tE-9um" secondAttribute="centerY" id="u5r-n7-hhf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="QuizDown" id="lMD-6v-pd6"/>
+                    <navigationItem key="navigationItem" title="QuizDown" id="lMD-6v-pd6">
+                        <barButtonItem key="rightBarButtonItem" image="sound_off" id="AW8-GL-1SU" userLabel="Sound Off Item">
+                            <connections>
+                                <action selector="otherButtonPressed:" destination="OEe-5B-78P" id="aRO-eP-xnv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3F-rg-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="651" y="321"/>
         </scene>
+        <!--Quiz Controller-->
+        <scene sceneID="UZx-Xv-N88">
+            <objects>
+                <viewController title="Quiz Controller" id="Rg5-Zn-GmX" customClass="QuizViewController" customModule="QuizDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d8q-KI-B4i"/>
+                        <viewControllerLayoutGuide type="bottom" id="y9b-7f-SVm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1F4-vG-BGo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Msr-9g-WAr" userLabel="Vertical Stack View">
+                                <rect key="frame" x="10" y="254" width="580" height="326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nud-PJ-4jG" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="163"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ula-j2-j63" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="163" width="580" height="163"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="asdflkjsdf alskdfj asldkfj asldkf jasldkf jasldkfj asldkfj asdf asdf asdf asdf asdfasdf " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRz-Dp-Rlo" userLabel="Question Text View">
+                                <rect key="frame" x="10" y="84" width="580" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="K1J-QX-OwI"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Msr-9g-WAr" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leading" constant="10" id="29v-Xo-45d"/>
+                            <constraint firstItem="Msr-9g-WAr" firstAttribute="top" secondItem="KRz-Dp-Rlo" secondAttribute="bottom" constant="20" id="2Qd-Yy-rTJ"/>
+                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leading" constant="10" id="5MQ-Oc-0RW"/>
+                            <constraint firstAttribute="trailing" secondItem="Msr-9g-WAr" secondAttribute="trailing" constant="10" id="A9h-UD-P3a"/>
+                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="top" secondItem="d8q-KI-B4i" secondAttribute="bottom" constant="20" id="Nop-U3-Zmu"/>
+                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="centerX" secondItem="1F4-vG-BGo" secondAttribute="centerX" id="b29-Oh-mI7"/>
+                            <constraint firstAttribute="trailing" secondItem="KRz-Dp-Rlo" secondAttribute="trailing" constant="10" id="k03-yJ-lcy"/>
+                            <constraint firstItem="Msr-9g-WAr" firstAttribute="centerX" secondItem="KRz-Dp-Rlo" secondAttribute="centerX" id="lSr-7c-DoF"/>
+                            <constraint firstAttribute="bottom" secondItem="Msr-9g-WAr" secondAttribute="bottom" constant="20" symbolic="YES" id="uZd-Km-uci"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Question #" id="xVy-qe-s4U">
+                        <barButtonItem key="rightBarButtonItem" image="sound_off" id="hqL-nQ-j8H">
+                            <connections>
+                                <action selector="otherButtonPressed:" destination="Rg5-Zn-GmX" id="JCs-uI-iji"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rj8-09-gKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398" y="321"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="sound_off" width="22" height="22"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fHZ-gK-mit"/>
+    </inferredMetricsTieBreakers>
 </document>
