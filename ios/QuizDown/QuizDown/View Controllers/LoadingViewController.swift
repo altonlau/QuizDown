@@ -18,7 +18,6 @@ class LoadingViewController: UIViewController {
                 let qdata = data as! NSDictionary
                 let question = Question(answer: (qdata["answer"] as! String?)!, question: (qdata["question"] as! String?)!)
                 questions.append(question)
-                print("Doing this...")
             }
             
             self.pViewController.questionArray = questions

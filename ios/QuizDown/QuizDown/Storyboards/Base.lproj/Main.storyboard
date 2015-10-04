@@ -136,15 +136,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Question" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRz-Dp-Rlo" userLabel="Question Text View">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A12-Zx-QWQ">
                                 <rect key="frame" x="30" y="84" width="540" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="qsn-Am-0QY"/>
+                                    <constraint firstAttribute="height" constant="150" id="tFE-Uc-T0k"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Msr-9g-WAr" userLabel="Vertical Stack View">
                                 <rect key="frame" x="30" y="254" width="540" height="326"/>
                                 <subviews>
@@ -191,13 +191,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leadingMargin" constant="10" id="EV7-KY-E5g"/>
-                            <constraint firstItem="KRz-Dp-Rlo" firstAttribute="top" secondItem="d8q-KI-B4i" secondAttribute="bottom" constant="20" id="QhO-E4-9wA"/>
+                            <constraint firstItem="A12-Zx-QWQ" firstAttribute="top" secondItem="d8q-KI-B4i" secondAttribute="bottom" constant="20" id="1yI-zx-Umh"/>
+                            <constraint firstItem="A12-Zx-QWQ" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leadingMargin" constant="10" id="FHU-HN-lhp"/>
+                            <constraint firstItem="Msr-9g-WAr" firstAttribute="leading" secondItem="1F4-vG-BGo" secondAttribute="leadingMargin" constant="10" id="Lki-KA-zOt"/>
                             <constraint firstAttribute="bottom" secondItem="Msr-9g-WAr" secondAttribute="bottom" constant="20" symbolic="YES" id="Rp1-Ma-fcV"/>
-                            <constraint firstItem="Msr-9g-WAr" firstAttribute="trailing" secondItem="KRz-Dp-Rlo" secondAttribute="trailing" id="a57-as-vb8"/>
-                            <constraint firstItem="Msr-9g-WAr" firstAttribute="leading" secondItem="KRz-Dp-Rlo" secondAttribute="leading" id="jeX-qh-UZS"/>
-                            <constraint firstItem="Msr-9g-WAr" firstAttribute="top" secondItem="KRz-Dp-Rlo" secondAttribute="bottom" constant="20" id="pVc-ld-QKT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KRz-Dp-Rlo" secondAttribute="trailing" constant="10" id="tii-yV-Jda"/>
+                            <constraint firstItem="Msr-9g-WAr" firstAttribute="top" secondItem="A12-Zx-QWQ" secondAttribute="bottom" constant="20" id="XXJ-2d-GPP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A12-Zx-QWQ" secondAttribute="trailing" constant="10" id="rp4-rI-Ha8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Msr-9g-WAr" secondAttribute="trailing" constant="10" id="xRO-6f-YVm"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -214,7 +214,7 @@
                         <outlet property="answerLabel2" destination="9Ab-LT-9HX" id="VlM-MR-Wui"/>
                         <outlet property="answerLabel3" destination="cOl-jG-6fh" id="dQU-Qq-wLe"/>
                         <outlet property="answerLabel4" destination="gUa-G2-gwJ" id="Rgb-Hh-mNo"/>
-                        <outlet property="questionTextView" destination="KRz-Dp-Rlo" id="CdL-9D-If9"/>
+                        <outlet property="questionLabel" destination="A12-Zx-QWQ" id="e2n-gl-9V9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rj8-09-gKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
