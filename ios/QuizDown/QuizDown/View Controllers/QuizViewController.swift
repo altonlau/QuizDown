@@ -33,7 +33,8 @@ class QuizViewController: UIViewController, AnswerLabelDelegate {
     
     func startQuiz() {
         if questionArray.count > 0 {
-            setupQuestion(questionArray.removeFirst())
+            let index = Int(arc4random_uniform(UInt32(questionArray.count)))
+            setupQuestion(questionArray.removeAtIndex(index))
         }
     }
     
