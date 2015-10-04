@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0CA25B1BC17B32004C8994 /* screaming_goat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA0CA25A1BC17B32004C8994 /* screaming_goat.mp3 */; settings = {ASSET_TAGS = (); }; };
+		FA0CA25D1BC1802D004C8994 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CA25C1BC1802D004C8994 /* QuizViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FA0CA2601BC1862F004C8994 /* GoatAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CA25F1BC1862F004C8994 /* GoatAudioPlayer.swift */; settings = {ASSET_TAGS = (); }; };
+		FA0CA2621BC18A5B004C8994 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CA2611BC18A5B004C8994 /* RoundedLabel.swift */; settings = {ASSET_TAGS = (); }; };
+		FA0CA2661BC18FF4004C8994 /* AnswerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CA2651BC18FF4004C8994 /* AnswerLabel.swift */; settings = {ASSET_TAGS = (); }; };
 		FA320A991BC15CAE005D9EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA320A981BC15CAE005D9EF2 /* AppDelegate.swift */; };
 		FA320ABF1BC1736F005D9EF2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA320AB41BC1736F005D9EF2 /* RoundedButton.swift */; settings = {ASSET_TAGS = (); }; };
 		FA320AC01BC1736F005D9EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA320AB61BC1736F005D9EF2 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0CA25A1BC17B32004C8994 /* screaming_goat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = screaming_goat.mp3; path = ../../../../../../../../../Downloads/screaming_goat.mp3; sourceTree = "<group>"; };
+		FA0CA25C1BC1802D004C8994 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		FA0CA25F1BC1862F004C8994 /* GoatAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoatAudioPlayer.swift; sourceTree = "<group>"; };
+		FA0CA2611BC18A5B004C8994 /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
+		FA0CA2651BC18FF4004C8994 /* AnswerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerLabel.swift; sourceTree = "<group>"; };
 		FA320A951BC15CAE005D9EF2 /* QuizDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA320A981BC15CAE005D9EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA320AA41BC15CAE005D9EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0CA25E1BC18624004C8994 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FA0CA25F1BC1862F004C8994 /* GoatAudioPlayer.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		FA320A8C1BC15CAE005D9EF2 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +79,7 @@
 				FA320AB31BC1736F005D9EF2 /* Custom Views */,
 				FA320AB51BC1736F005D9EF2 /* Resources */,
 				FA320AB81BC1736F005D9EF2 /* Storyboards */,
+				FA0CA25E1BC18624004C8994 /* Tools */,
 				FA320ABD1BC1736F005D9EF2 /* View Controllers */,
 			);
 			path = QuizDown;
@@ -70,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				FA320AB41BC1736F005D9EF2 /* RoundedButton.swift */,
+				FA0CA2611BC18A5B004C8994 /* RoundedLabel.swift */,
+				FA0CA2651BC18FF4004C8994 /* AnswerLabel.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -86,6 +107,7 @@
 		FA320AB71BC1736F005D9EF2 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FA0CA25A1BC17B32004C8994 /* screaming_goat.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -103,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FA320ABE1BC1736F005D9EF2 /* MainViewController.swift */,
+				FA0CA25C1BC1802D004C8994 /* QuizViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -168,6 +191,7 @@
 				FA320AC01BC1736F005D9EF2 /* Assets.xcassets in Resources */,
 				FA320AC21BC1736F005D9EF2 /* Main.storyboard in Resources */,
 				FA320AC11BC1736F005D9EF2 /* LaunchScreen.storyboard in Resources */,
+				FA0CA25B1BC17B32004C8994 /* screaming_goat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0CA2601BC1862F004C8994 /* GoatAudioPlayer.swift in Sources */,
 				FA320A991BC15CAE005D9EF2 /* AppDelegate.swift in Sources */,
+				FA0CA2661BC18FF4004C8994 /* AnswerLabel.swift in Sources */,
+				FA0CA2621BC18A5B004C8994 /* RoundedLabel.swift in Sources */,
 				FA320ABF1BC1736F005D9EF2 /* RoundedButton.swift in Sources */,
 				FA320AC31BC1736F005D9EF2 /* MainViewController.swift in Sources */,
+				FA0CA25D1BC1802D004C8994 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
