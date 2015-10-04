@@ -1,6 +1,7 @@
 package com.ag.quizdown.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.ag.quizdown.R;
+import com.ag.quizdown.activity.QuestionActivity;
 import com.ag.quizdown.sound.Sound;
 
 import org.apache.http.HttpEntity;
@@ -18,9 +20,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -73,7 +72,6 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     public void generateQuestionActivity() {
         class GetQuestions extends AsyncTask<String, Void, String> {
 
-            private static final String JSON_TAG = "data";
             private ProgressDialog mProgressDialog = new ProgressDialog(getActivity());
 
             protected void onPreExecute() {
@@ -118,23 +116,21 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
             @Override
             protected void onPostExecute(String result) {
-                try {
 
-                    this.mProgressDialog.dismiss();
-                    if (result != null) {
-                        JSONArray jsonArray = (new JSONObject(result)).getJSONArray(JSON_TAG);
-                        System.out.println("asdasd");
-                    }
-                    else {
-                        Toast.makeText(getActivity(), "No questions available :(",
-                                Toast.LENGTH_LONG).show();
-                    }
+                this.mProgressDialog.dismiss();
+                if (result != null) {
+                    Bundle intentBundle = new Bundle();
+                    intentBundle.putString("json", result);
 
+                    Intent questionIntent = new Intent(getActivity(), QuestionActivity.class);
+                    questionIntent.putExtras(intentBundle);
 
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    startActivity(questionIntent);
+                } else {
+                    Toast.makeText(getActivity(), "No questions available :(",
+                            Toast.LENGTH_LONG).show();
                 }
+
             }
         }
 

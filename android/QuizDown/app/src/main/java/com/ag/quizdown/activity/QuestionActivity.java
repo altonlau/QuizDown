@@ -4,33 +4,47 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.ag.quizdown.fragment.MainFragment;
 import com.ag.quizdown.R;
+import com.ag.quizdown.fragment.QuestionFragment;
 import com.ag.quizdown.sound.Sound;
 
-public class MainActivity extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-    private MainFragment mMainFragment;
+public class QuestionActivity extends AppCompatActivity {
+
+    private static final String JSON_TAG = "data";
+
+    private QuestionFragment mQuestionFragment;
+    private JSONArray jsonArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        mMainFragment = new MainFragment();
+        if (getIntent().getExtras() != null) {
+            Bundle intentExtras = getIntent().getExtras();
+            try {
+                // Used to the json array from the activity
+                jsonArray = (new JSONObject(intentExtras.getString("json"))).getJSONArray(JSON_TAG);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        getSupportActionBar().setTitle("Question #");
+
+        mQuestionFragment = new QuestionFragment();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.replace(R.id.content_main, mMainFragment);
+        fragmentTransaction.replace(android.R.id.content, mQuestionFragment);
         fragmentTransaction.commit();
-
     }
 
     @Override
@@ -56,4 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public JSONArray getQuestionArray() {
+        return jsonArray;
+    }
+
 }
