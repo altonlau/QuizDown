@@ -6,6 +6,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ag.quizdown.sound.Sound;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_mute) {
-
+            Sound.screamSheep(this);
 
             return true;
         }
