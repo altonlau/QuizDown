@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">QuizDown</string>
     <string name="action_mute">Mute</string>
+    <string name="btn_math_hard">Math Hard</string>
+    <string name="btn_math_medium">Math Medium</string>
+    <string name="btn_math_easy">Math Easy</string>
+    <string name="btn_click_me">Click Me!</string>
 </resources>
