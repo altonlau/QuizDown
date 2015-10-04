@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.ag.quizdown.R;
 import com.ag.quizdown.activity.CongratsActivity;
@@ -32,6 +33,10 @@ public class CongratsFragment extends Fragment implements View.OnClickListener {
         for (int i = 1; i <= ((CongratsActivity)getActivity()).getNumWrong(); i++) {
             Sound.screamSheep(getActivity());
         }
+
+        Button back = (Button) getView().findViewById(R.id.go_back);
+
+        back.setOnClickListener(this);
     }
 
     public void onClick(View view) {

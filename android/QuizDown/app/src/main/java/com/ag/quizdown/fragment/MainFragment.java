@@ -78,8 +78,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 mProgressDialog.setMessage("Loading");
                 mProgressDialog.show();
 
-                // TODO: UNCOMMENT THE SCREAM AFTER DONE TESTING
-                //Sound.screamSheep(getActivity());
+                Sound.screamSheep(getActivity());
             }
 
             @Override
