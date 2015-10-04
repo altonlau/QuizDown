@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA320A991BC15CAE005D9EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA320A981BC15CAE005D9EF2 /* AppDelegate.swift */; };
+		FA320ABF1BC1736F005D9EF2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA320AB41BC1736F005D9EF2 /* RoundedButton.swift */; settings = {ASSET_TAGS = (); }; };
+		FA320AC01BC1736F005D9EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA320AB61BC1736F005D9EF2 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		FA320AC11BC1736F005D9EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA320AB91BC1736F005D9EF2 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FA320AC21BC1736F005D9EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA320ABB1BC1736F005D9EF2 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FA320AC31BC1736F005D9EF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA320ABE1BC1736F005D9EF2 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA320A951BC15CAE005D9EF2 /* QuizDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA320A981BC15CAE005D9EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA320AA41BC15CAE005D9EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA320AB41BC1736F005D9EF2 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		FA320AB61BC1736F005D9EF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA320ABA1BC1736F005D9EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA320ABC1BC1736F005D9EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA320ABE1BC1736F005D9EF2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA320A921BC15CAE005D9EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA320A8C1BC15CAE005D9EF2 = {
+			isa = PBXGroup;
+			children = (
+				FA320A971BC15CAE005D9EF2 /* QuizDown */,
+				FA320A961BC15CAE005D9EF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA320A961BC15CAE005D9EF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA320A951BC15CAE005D9EF2 /* QuizDown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA320A971BC15CAE005D9EF2 /* QuizDown */ = {
+			isa = PBXGroup;
+			children = (
+				FA320A981BC15CAE005D9EF2 /* AppDelegate.swift */,
+				FA320AA41BC15CAE005D9EF2 /* Info.plist */,
+				FA320AB31BC1736F005D9EF2 /* Custom Views */,
+				FA320AB51BC1736F005D9EF2 /* Resources */,
+				FA320AB81BC1736F005D9EF2 /* Storyboards */,
+				FA320ABD1BC1736F005D9EF2 /* View Controllers */,
+			);
+			path = QuizDown;
+			sourceTree = "<group>";
+		};
+		FA320AB31BC1736F005D9EF2 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA320AB41BC1736F005D9EF2 /* RoundedButton.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		FA320AB51BC1736F005D9EF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA320AB61BC1736F005D9EF2 /* Assets.xcassets */,
+				FA320AB71BC1736F005D9EF2 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA320AB71BC1736F005D9EF2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FA320AB81BC1736F005D9EF2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA320AB91BC1736F005D9EF2 /* LaunchScreen.storyboard */,
+				FA320ABB1BC1736F005D9EF2 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA320ABD1BC1736F005D9EF2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA320ABE1BC1736F005D9EF2 /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA320A941BC15CAE005D9EF2 /* QuizDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA320AA71BC15CAE005D9EF2 /* Build configuration list for PBXNativeTarget "QuizDown" */;
+			buildPhases = (
+				FA320A911BC15CAE005D9EF2 /* Sources */,
+				FA320A921BC15CAE005D9EF2 /* Frameworks */,
+				FA320A931BC15CAE005D9EF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuizDown;
+			productName = QuizDown;
+			productReference = FA320A951BC15CAE005D9EF2 /* QuizDown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA320A8D1BC15CAE005D9EF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Alton/Gourave;
+				TargetAttributes = {
+					FA320A941BC15CAE005D9EF2 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = BYL7RU9R7T;
+					};
+				};
+			};
+			buildConfigurationList = FA320A901BC15CAE005D9EF2 /* Build configuration list for PBXProject "QuizDown" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA320A8C1BC15CAE005D9EF2;
+			productRefGroup = FA320A961BC15CAE005D9EF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA320A941BC15CAE005D9EF2 /* QuizDown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA320A931BC15CAE005D9EF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA320AC01BC1736F005D9EF2 /* Assets.xcassets in Resources */,
+				FA320AC21BC1736F005D9EF2 /* Main.storyboard in Resources */,
+				FA320AC11BC1736F005D9EF2 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA320A911BC15CAE005D9EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA320A991BC15CAE005D9EF2 /* AppDelegate.swift in Sources */,
+				FA320ABF1BC1736F005D9EF2 /* RoundedButton.swift in Sources */,
+				FA320AC31BC1736F005D9EF2 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA320AB91BC1736F005D9EF2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA320ABA1BC1736F005D9EF2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA320ABB1BC1736F005D9EF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA320ABC1BC1736F005D9EF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA320AA51BC15CAE005D9EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA320AA61BC15CAE005D9EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA320AA81BC15CAE005D9EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QuizDown/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AG.QuizDown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA320AA91BC15CAE005D9EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QuizDown/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AG.QuizDown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA320A901BC15CAE005D9EF2 /* Build configuration list for PBXProject "QuizDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA320AA51BC15CAE005D9EF2 /* Debug */,
+				FA320AA61BC15CAE005D9EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA320AA71BC15CAE005D9EF2 /* Build configuration list for PBXNativeTarget "QuizDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA320AA81BC15CAE005D9EF2 /* Debug */,
+				FA320AA91BC15CAE005D9EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA320A8D1BC15CAE005D9EF2 /* Project object */;
+}
