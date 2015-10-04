@@ -1,6 +1,5 @@
 package com.ag.quizdown.fragment;
 
-
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -35,7 +34,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private Button mClickMe;
 
     public MainFragment() {
-
+        // Empty constructor
     }
 
     @Override
@@ -58,6 +57,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         mMathMedium.setOnClickListener(this);
         mMathHard.setOnClickListener(this);
 
+        mClickMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Sound.screamSheep(getActivity());
+            }
+        });
     }
 
     @Override
