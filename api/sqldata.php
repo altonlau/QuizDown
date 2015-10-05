@@ -1,5 +1,6 @@
 <?php
 
+// MySQL credentials, as you can probably tell, our db security if off the charts....
 $mysql_host = "mysql17.000webhost.com";
 $mysql_database = "a2291907_qzdown";
 $mysql_user = "a2291907_master";
