@@ -1,0 +1,19 @@
+.logo-splash {
+  background-color: #663399;
+  height: 90vh;
+  color: white;
+}
+
+.logo-image {
+  height: 60vh;
+  display: block;
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.top-margin-text {
+  margin-top: 20px;
+}
